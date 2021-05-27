@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- CSS only -->
-  <link href="/styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="testSobject">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -74,9 +74,8 @@
         </div>
         <br>
         <article>
-          <input type="image" src="/images/1-1.png" width="49%" onclick="modal()">
-          <input type="image" src="/images/1-1-2.png" width="49%" onclick="modal()">
-          <input type="image" src="/images/1-1.png" width="100%" onclick="modal()" id="myBtn" style="display:none;">
+          <img src="/images/1-1.png" width="49%">
+          <img src="/images/1-1-2.png" width="49%">
         </article>
         <br><br>
       </div>
@@ -199,7 +198,7 @@
 
       <div class="text-center">
         <h1>Lesson 1 Quiz - 5 Questions (for now)</h1>
-        <button onclick="startQuiz()" style="font-size:20px; border:0;" id="startQuiz">Start The Quiz!</button>
+        <button onclick="startQuiz()" style="font-size:20px;" id="startQuiz">Start The Quiz!</button>
         <div id="result"></div>
         <br><br><br>
       </div>
