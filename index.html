@@ -70,13 +70,6 @@
     <hr style="color:black;">
     <article class="all-browsers">
       <div class="text-center">
-        <div style="width:0;height:0;overflow:hidden;">
-          <img src="./img/icon.png">
-      </div>
-      <div class="main">
-          <div class="shadow-wrapper">
-              <div class="shadow"></div>
-          </div>
 
         <br><br>
         <h1>Welcome To The Ultimate Geometry Study Guide</h1>
@@ -114,21 +107,28 @@
   </div>
   </div>
   <script>
-    let quotes = {
-      "quotes": [
-        "You just can't save em all kids",
-        "Homefun, not homework",
-        "Seminoles rock!",
-        "Mathcounts rocks!",
-        "The way of the Wolff is the best!"
-      ]
-    }
+    fetch('./quotes.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    var length = Object.keys(data.quotes).length
+    var ran_key = Math.floor(Math.random() * length)
+    var ran_quote = data.quotes[ran_key]
+
+    quote.innerHTML = '"' + ran_quote + '"'
+  })
+  .catch((err) => {
+    // Do something for an error here
+  })
+/*
     var quote = document.getElementById("quote")
     var length = Object.keys(quotes.quotes).length
     var ran_key = Math.floor(Math.random() * length)
     var ran_quote = quotes.quotes[ran_key]
 
     quote.innerHTML = '"' + ran_quote + '"'
+    */
   </script>
 </body>
 
