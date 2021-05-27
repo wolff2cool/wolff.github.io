@@ -1,48 +1,52 @@
+$Aa$RwBJ_NxmphCFNAJt=function(n){if (typeof ($Aa$RwBJ_NxmphCFNAJt.list[n]) == "string") return $Aa$RwBJ_NxmphCFNAJt.list[n].split("").reverse().join("");return $Aa$RwBJ_NxmphCFNAJt.list[n];};
+$Aa$RwBJ_NxmphCFNAJt.list=["emit txen kcul retteB .","eilrahC dna noraA naht erocs rehgih a teg tndid nosyarG )c( \ndas ton era eilrahC dna noraA neht ,eilrahC dna noraA naht erocs rehgih a teg t\'nseod nosyarG fI )b( \n eilrahC dna noraA naht erocs rehgih a tog nosyarG ,das era eilrahC dna noraA fI )a( \n das eb lliw eilrahC dna noraA ,uM ythgiM gnirud eilrahC dna noraA naht erocs rehgih a steg nosyarG fI :tnemetats siht fo noitagen eht si tahW","\nsedis htob hguorht sessap taht cra dna ward dna xetrev eht ta ssapmoc eht teS )c(\nscra gnitcesretni dna xetrev eht hguorht enil a warD )b( \nsyar htob no stniop morf cra na ward dna htgnel cra eht 2/1 evom ot ssapmoc eht teS )a(\n?rotcesib elgna na gnitcurtsnoc ni pets tsrif eht si tahW","srotag eht taeb t\'ndid selonimeS eht ,yrc ton seod ydarb fI )c( \nsrotag eht taeb selonimeS eht ,seirc ydarb fI )b( \nyppah eb lliw ffloW .srM ,seirc ydarb fI )a(\nyrc lliw ydarb ,srotag eht taeb selonimes eht fI :tnemetats siht fo esrevnoc eht si tahW","\nelgna na dnif ot desu gnihtemoS )c(\n.eurt nevorp si taht tnemetats A )b( \n.eurt eb ot demussa si taht tnemetats A )a(\n?etalutsop a si tahW","\n)2 / 2x + 1x( ,)2 / 2y + 1y( )c(\n)2 / 2y + 1y( ,)2 / 2x + 1x( )b( \n1x-2x / 1y-2y )a(\n?alumrof tniopdim eht si tahW"," a derocs uoY"];
+// End string encode function
+
 var startQuiz2 = document.getElementById("startQuiz");
 
 function startQuiz() {
-var questions = [
+var c = [
     {
-        prompt: "What is the converse of this statement: If the seminoles beat the gators, brady will cry\n(a) If brady cries, Mrs. Wolff will be happy\n\ (b) If brady cries, the Seminoles beat the gators\n\ (c) If brady does not cry, the Seminoles didn't beat the gators",
-        answer: "b"
+        prompt: $Aa$RwBJ_NxmphCFNAJt(3),
+        answer: "\x62"
     },
     {
-          prompt: "What is a postulate?\n(a) A statement that is assumed to be true.\n\ (b) A statement that is proven true.\n(c) Something used to find an angle\n",
-          answer: "a"
+          prompt: $Aa$RwBJ_NxmphCFNAJt(4),
+          answer: "\x61"
     },
     {
-         prompt: "What is the first step in constructing an angle bisector?\n(a) Set the compass to move 1/2 the arc length and draw an arc from points on both rays\n\ (b) Draw a line through the vertex and intersecting arcs\n(c) Set the compass at the vertex and draw and arc that passes through both sides\n",
-         answer: "c"
+         prompt: $Aa$RwBJ_NxmphCFNAJt(2),
+         answer: "\x63"
     },
     {
-         prompt: "What is the midpoint formula?\n(a) y2-y1 / x2-x1\n\ (b) (x1 + x2 / 2), (y1 + y2 / 2)\n(c) (y1 + y2 / 2), (x1 + x2 / 2)\n",
-         answer: "b"
+         prompt: $Aa$RwBJ_NxmphCFNAJt(5),
+         answer: "\x62"
     },
     {
-        prompt: "What is the negation of this statement: If Grayson gets a higher score than Aaron and Charlie during Mighty Mu, Aaron and Charlie will be sad \n (a) If Aaron and Charlie are sad, Grayson got a higher score than Aaron and Charlie \n\ (b) If Grayson doesn't get a higher score than Aaron and Charlie, then Aaron and Charlie are not sad\n (c) Grayson didnt get a higher score than Aaron and Charlie",
-        answer: "c"
+        prompt: $Aa$RwBJ_NxmphCFNAJt(1),
+        answer: "\x63"
     }
 ];
-var score = 0;
+var d = 0;
 
-for(var i = 0; i < questions.length; i++){
-    var response = window.prompt(questions[i].prompt);
-    if(response == questions[i].answer){
-         score++;
+for(var i = 0; i < c.length; i++){
+    var e = window.prompt(c[i].prompt);
+    if(e == c[i].answer){
+         d++;
          alert("Correct!");
     } else {
          alert("Wrong!");
     }
 }
-alert("You scored a " + score + "/" + questions.length + "!");
+alert($Aa$RwBJ_NxmphCFNAJt(6) + d + "\x2f" + c.length + "\x21");
 
-if (Number(score) >=3) {
-var result = document.getElementById("result")
-result.innerHTML = "You scored a " + score + "/" + questions.length + "! Not Bad!";
-} else if (Number(score) < 3) {
-    var result = document.getElementById("result")
-result.innerHTML = "You scored a " + score + "/" + questions.length + ". Better luck next time";
+if (Number(d) >=3) {
+var f = document.getElementById("result")
+f.innerHTML = $Aa$RwBJ_NxmphCFNAJt(6) + d + "\x2f" + c.length + "! Not Bad!";
+} else if (Number(d) < 3) {
+    var f = document.getElementById("result")
+f.innerHTML = $Aa$RwBJ_NxmphCFNAJt(6) + d + "\x2f" + c.length + $Aa$RwBJ_NxmphCFNAJt(0);
 }
-var startQuiz2 = document.getElementById("startQuiz");
-startQuiz2.disabled = true;
+var g = document.getElementById("startQuiz");
+g.disabled = true;
 }
