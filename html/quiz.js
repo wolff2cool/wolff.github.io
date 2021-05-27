@@ -36,13 +36,62 @@ for(var i = 0; i < questions.length; i++){
 }
 alert("You scored a " + score + "/" + questions.length + "!");
 
-if (Number(score) >=3) {
+if (Number(score) >= 4) {
 var result = document.getElementById("result")
 result.innerHTML = "You scored a " + score + "/" + questions.length + "! Not Bad!";
-} else if (Number(score) < 3) {
+} else if (Number(score) < 4) {
     var result = document.getElementById("result")
 result.innerHTML = "You scored a " + score + "/" + questions.length + ". Better luck next time";
 }
 var startQuiz2 = document.getElementById("startQuiz");
 startQuiz2.disabled = true;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+var startQuiz3 = document.getElementById("startQuiz2");
+
+function startQuizTwo() {
+var questions = [
+    {
+        prompt:"What is the Same-Side Interior Angles Postulate?\n (a) If a transversal intersects 2 parallel lines, then the alternate interior angles are congruent\n\ (b) If a transversal intersects 2 parallel lines, then same side interior angles are supplementary\n (c) If a transversal intersects 2 parallel lines, then same side interior angles are congruent",
+        answer:"b"
+    },
+    {
+        prompt:"What is the Converse of the Alternate Exterior Angles Theorem?\n (a) If 2 lines and a transversal form congruent alternate exterior angles, then the lines are parallel\n\ (b) If a transversal intersects 2 parallel lines, then alternate interior angles are congruent\n (c)  If 2 lines and a transversal form supplementary alternate exterior angles, then the lines are parallel",
+        answer:"a"
+    },
+    {
+        prompt: "If two angles in a triangle are 42 and the other is x, what is x?\n (a) 96\n\ (b) 138\n (c) 69",
+        answer:"a"
+    },
+    {
+        prompt:"What is the measure of the exterior angle of a triangle with two remote interior angles that are each 69?\n (a) 69\n\ (b) 139 (c) 138",
+        answer: "c"
+    },
+    {
+        prompt:"What is the equation of a line perpendicular to a line with a slope of -1/2 passing through point (1,3)?\n (a) ",
+        answer:"b"
+    }
+];
+var score2 = 0;
+
+for(var i = 0; i < questions.length; i++){
+    var response = window.prompt(questions[i].prompt);
+    if(response == questions[i].answer){
+         score2++;
+         alert("Correct!");
+    } else {
+         alert("Wrong!");
+    }
+}
+alert("You scored a " + score2 + "/" + questions.length + "!");
+
+if (Number(score2) >= 4) {
+var result2 = document.getElementById("result")
+result2.innerHTML = "You scored a " + score2 + "/" + questions.length + "! Not Bad!";
+} else if (Number(score2) < 4) {
+    var result2 = document.getElementById("result2")
+result2.innerHTML = "You scored a " + score2 + "/" + questions.length + ". Better luck next time";
+}
+var startQuiz3 = document.getElementById("startQuiz2");
+startQuiz3.disabled = true;
 }

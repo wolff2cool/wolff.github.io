@@ -51,13 +51,13 @@
             <a class="nav-link" href="/html/9.html">9</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/html/10.html"><b>10</b></a>
+            <a class="nav-link" href="/html/10.html">10</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/html/11.html">11</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/html/fun.html">Fun</a>
+            <a class="nav-link" href="/html/fun.html"><b>Fun</b></a>
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -66,9 +66,67 @@
   </nav>
     <div class="container">
         <div class="row">
+            <div class="col-4">
+                <h1>Facts!</h1>
+            <button onclick="newFact()" style="font-size:20px; width:100px; border: 0;" id="new">New Fact
             
+            </button>
+            <div class="funfact">Random Fact: <span id="resultfact"></span></div>
+            </div>
+            <div class="col-4">
+                <h1>Animals!</h1>
+            <a href='javascript:void(0);' class='get-dog button' style="text-decoration: none; color: black; background-color: lightgrey; opacity: 1; padding: 10px;">Dog</a>
+            <br><br>
+            <div class="image">
+                <div class="image-content">
+                </div>
+
+                <br><br>
+
+            </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+    fetch('/facts.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    var length = Object.keys(data.facts).length
+    var ran_key = Math.floor(Math.random() * length)
+    var ran_fact = data.facts[ran_key]
+    var resultfact = document.getElementById("resultfact")
+    resultfact.innerHTML = ran_fact 
+  })
+function newFact() {
+    location.reload()
+}
+
+function getDog(){
+            $.getJSON("https://dog.ceo/api/breeds/image/random", function( data ) {
+                $(".json pre").html(JSON.stringify(data, null, 4));
+                $(".image-content").html("<img width=100% src='" + data.message + "'>");
+            });
+        }
+        $('.get-dog').click(function(){
+            getDog();
+        });
+/*
+fetch('https://api.thecatapi.com/v1/images/search')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data)
+    console.log(data[0].url)
+    var gato = document.getElementById("gato")
+    gato.src=data[0].url
+  })
+*/
+  
+    </script>
+    
 </body>
 </html>
