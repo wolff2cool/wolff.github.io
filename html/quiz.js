@@ -1,1 +1,49 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('7 v=u.s("w");1f w(){7 f=[{e:"k d 4 1h T R r: g 4 1k G 4 F, o y 16\\n(a) g o 17, 1j. 1d y B 1l\\n\\ (b) g o 17, 4 18 G 4 F\\n\\ (c) g o 1t 14 16, 4 18 1v\'t G 4 F",h:"b"},{e:"k d a 1r?\\n(a) A r K d 1s E B x.\\n\\ (b) A r K d 1q x.\\n(c) 1p 1n E 1u H S\\n",h:"a"},{e:"k d 4 1z 1y 1x 1m H S 1A?\\n(a) W 4 V E 1b 1/2 4 I l 6 Y H I 19 1c 1e Z 1i\\n\\ (b) 1g a 1o 10 4 X 6 1H 1W\\n(c) W 4 V 1V 4 X 6 Y 6 I K 1S 10 Z 1T\\n",h:"c"},{e:"k d 4 1Y 1X?\\n(a) M-J / C-D\\n\\ (b) (D + C / 2), (J + M / 2)\\n(c) (J + M / 2), (D + C / 2)\\n",h:"b"},{e:"k d 4 1Q T R r: g p 1G a m 5 q 9 6 8 1R 1F 1E, 9 6 8 y B z \\n (a) g 9 6 8 13 z, p 1D a m 5 q 9 6 8 \\n\\ (b) g p 1I\'t 15 a m 5 q 9 6 8, 1J 9 6 8 13 14 z\\n (c) p 1N 15 a m 5 q 9 6 8",h:"c"}];7 5=0;1O(7 i=0;i<f.l;i++){7 12=1C.e(f[i].e);P(12==f[i].h){5++;N("20!")}U{N("1Z!")}}N("O L a "+5+"/"+f.l+"!");21.1U(\'5\',5)P(11(5)>=3){7 j=u.s("j")j.Q="O L a "+5+"/"+f.l+"! 1B 1a!"}U P(11(5)<3){7 j=u.s("j")j.Q="O L a "+5+"/"+f.l+". 1L 1K 1M 1P"}7 v=u.s("w");v.1w=x}',62,126,'||||the|score|and|var|Charlie|Aaron||||is|prompt|questions|If|answer||result|What|length|higher||brady|Grayson|than|statement|getElementById||document|startQuiz2|startQuiz|true|will|sad||be|x2|x1|to|gators|beat|an|arc|y1|that|scored|y2|alert|You|if|innerHTML|this|angle|of|else|compass|Set|vertex|draw|both|through|Number|response|are|not|get|cry|cries|Seminoles|from|Bad|move|points|Wolff|on|function|Draw|converse|rays|Mrs|seminoles|happy|constructing|used|line|Something|proven|postulate|assumed|does|find|didn|disabled|in|step|first|bisector|Not|window|got|Mu|Mighty|gets|intersecting|doesn|then|luck|Better|next|didnt|for|time|negation|during|passes|sides|setItem|at|arcs|formula|midpoint|Wrong|Correct|localStorage'.split('|'),0,{}))
+var startQuiz2 = document.getElementById("startQuiz");
+
+function startQuiz() {
+var questions = [
+    {
+        prompt: "What is the converse of this statement: If the seminoles beat the gators, brady will cry\n(a) If brady cries, Mrs. Wolff will be happy\n\ (b) If brady cries, the Seminoles beat the gators\n\ (c) If brady does not cry, the Seminoles didn't beat the gators",
+        answer: "b"
+    },
+    {
+          prompt: "What is a postulate?\n(a) A statement that is assumed to be true.\n\ (b) A statement that is proven true.\n(c) Something used to find an angle\n",
+          answer: "a"
+    },
+    {
+         prompt: "What is the first step in constructing an angle bisector?\n(a) Set the compass to move 1/2 the arc length and draw an arc from points on both rays\n\ (b) Draw a line through the vertex and intersecting arcs\n(c) Set the compass at the vertex and draw and arc that passes through both sides\n",
+         answer: "c"
+    },
+    {
+         prompt: "What is the midpoint formula?\n(a) y2-y1 / x2-x1\n\ (b) (x1 + x2 / 2), (y1 + y2 / 2)\n(c) (y1 + y2 / 2), (x1 + x2 / 2)\n",
+         answer: "b"
+    },
+    {
+        prompt: "What is the negation of this statement: If Grayson gets a higher score than Aaron and Charlie during Mighty Mu, Aaron and Charlie will be sad \n (a) If Aaron and Charlie are sad, Grayson got a higher score than Aaron and Charlie \n\ (b) If Grayson doesn't get a higher score than Aaron and Charlie, then Aaron and Charlie are not sad\n (c) Grayson didnt get a higher score than Aaron and Charlie",
+        answer: "c"
+    }
+];
+var score = 0;
+
+for(var i = 0; i < questions.length; i++){
+    var response = window.prompt(questions[i].prompt);
+    if(response == questions[i].answer){
+         score++;
+         alert("Correct!");
+    } else {
+         alert("Wrong!");
+    }
+}
+alert("You scored a " + score + "/" + questions.length + "!");
+localStorage.setItem('score', score)
+
+if (Number(score) >=3) {
+var result = document.getElementById("result")
+result.innerHTML = "You scored a " + score + "/" + questions.length + "! Not Bad!";
+} else if (Number(score) < 3) {
+    var result = document.getElementById("result")
+result.innerHTML = "You scored a " + score + "/" + questions.length + ". Better luck next time";
+}
+var startQuiz2 = document.getElementById("startQuiz");
+startQuiz2.disabled = true;
+}
