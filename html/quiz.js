@@ -36,13 +36,13 @@ for(var i = 0; i < questions.length; i++){
 }
 alert("You scored a " + score + "/" + questions.length + "!");
 
-if (Number(score) >= 4) {
-var result = document.getElementById("result")
-result.innerHTML = "You scored a " + score + "/" + questions.length + "! Not Bad!";
-} else if (Number(score) < 4) {
+if (Math.floor((score / questions.length) * 100) >= 80) {
     var result = document.getElementById("result")
-result.innerHTML = "You scored a " + score + "/" + questions.length + ". Better luck next time";
-}
+    result.innerHTML = "You scored a " + score + "/" + questions.length + ` (${Math.floor((score / questions.length) * 100)}%)` + "! Not Bad!";
+    } else if (Math.floor((score / questions.length) * 100) < 80) {
+        var result = document.getElementById("result3")
+    result.innerHTML = "You scored a " + score + "/" + questions.length + ` (${Math.floor((score / questions.length) * 100)}%)` + ". Better luck next time";
+    }
 var startQuiz2 = document.getElementById("startQuiz");
 startQuiz2.disabled = true;
 }
@@ -85,13 +85,47 @@ for(var i = 0; i < questions.length; i++){
 }
 alert("You scored a " + score2 + "/" + questions.length + "!");
 
-if (Number(score2) >= 4) {
-var result2 = document.getElementById("result")
-result2.innerHTML = "You scored a " + score2 + "/" + questions.length + "! Not Bad!";
-} else if (Number(score2) < 4) {
+if (Math.floor((score2 / questions.length) * 100) >= 80) {
     var result2 = document.getElementById("result2")
-result2.innerHTML = "You scored a " + score2 + "/" + questions.length + ". Better luck next time";
-}
+    result2.innerHTML = "You scored a " + score2 + "/" + questions.length + ` (${Math.floor((score2 / questions.length) * 100)}%)` + "! Not Bad!";
+    } else if (Math.floor((score2 / questions.length) * 100) < 80) {
+        var result2 = document.getElementById("result2")
+    result2.innerHTML = "You scored a " + score2 + "/" + questions.length + ` (${Math.floor((score2 / questions.length) * 100)}%)` + ". Better luck next time";
+    }
 var startQuiz3 = document.getElementById("startQuiz2");
 startQuiz3.disabled = true;
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var startQuiz4 = document.getElementById("startQuiz3");
+
+function startQuizThree() {
+var questions = [
+    {
+        prompt: "",
+        answer: "b"
+    }
+];
+var score3 = 0;
+
+for(var i = 0; i < questions.length; i++){
+    var response = window.prompt(questions[i].prompt);
+    if(response == questions[i].answer){
+         score3++;
+         alert("Correct!");
+    } else {
+         alert("Wrong!");
+    }
+}
+alert("You scored a " + score3 + "/" + questions.length + "!");
+
+if (Math.floor((score3 / questions.length) * 100) >= 80) {
+var result3 = document.getElementById("result3")
+result3.innerHTML = "You scored a " + score3 + "/" + questions.length + ` (${Math.floor((score3 / questions.length) * 100)}%)` + "! Not Bad!";
+} else if (Math.floor((score3 / questions.length) * 100) < 80) {
+    var result3 = document.getElementById("result3")
+result3.innerHTML = "You scored a " + score3 + "/" + questions.length + ` (${Math.floor((score3 / questions.length) * 100)}%)` + ". Better luck next time";
+}
+var startQuiz4 = document.getElementById("startQuiz3");
+startQuiz4.disabled = true;
+}
+
