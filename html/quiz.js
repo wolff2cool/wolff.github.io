@@ -64,11 +64,11 @@ var questions = [
         answer:"a"
     },
     {
-        prompt:"What is the measure of the exterior angle of a triangle with two remote interior angles that are each 69?\n (a) 69\n\ (b) 139 (c) 138",
+        prompt:"What is the measure of the exterior angle of a triangle with two remote interior angles that are each 69?\n (a) 69\n\ (b) 139\n (c) 138",
         answer: "c"
     },
     {
-        prompt:"What is the equation of a line perpendicular to a line with a slope of -1/2 passing through point (1,3)?\n (a) ",
+        prompt:"What is the equation of a line perpendicular to a line with a slope of -1/2 passing through point (1,3)?\n (a) 2\n\(b) 1\n (c) 3",
         answer:"b"
     }
 ];
