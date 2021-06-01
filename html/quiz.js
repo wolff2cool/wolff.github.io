@@ -68,7 +68,7 @@ var questions = [
         answer: "c"
     },
     {
-        prompt:"What is the equation of a line perpendicular to a line with a slope of -1/2 passing through point (1,3)?\n (a) 2\n\(b) 1\n (c) 3",
+        prompt:"What is the equation of a line perpendicular to a line with a slope of -1/2 passing through point (1,3)?\n (a) y=2x+2\n\(b) y=2x+1\n (c) y=-1/2x+1",
         answer:"b"
     }
 ];
@@ -102,11 +102,15 @@ function startQuizThree() {
 var questions = [
     {
         prompt: "What is a rigid motion transformation?\n\ (a) a transformation that preserves the length of the shape \n\ (b) a reflection or a translation \n\ (c) a transformation that preserves length and angle measure",
-        answer: "b"
+        answer: "c"
     },
     {
-        prompt: "",
+        prompt: "What happens with the coordinates during a reflection over the x-axis?\n\ (m) (-y, x) \n\ (o) (-x, -y) \n\ (n) (y, -x) \n\ (k) (x, -y) \n\ (e) (-x, y)",
         answer: "k"
+    },
+    {
+        prompt: "What is correct translation notation?\n\ (a) T (x, y) \n\ (b) T (y, x) \n\ (c) T (monke)",
+        answer: "a"
     }
 ];
 var score3 = 0;
