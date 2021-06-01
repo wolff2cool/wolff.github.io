@@ -101,8 +101,12 @@ var startQuiz4 = document.getElementById("startQuiz3");
 function startQuizThree() {
 var questions = [
     {
-        prompt: "",
+        prompt: "What is a rigid motion transformation?\n\ (a) a transformation that preserves the length of the shape \n\ (b) a reflection or a translation \n\ (c) a transformation that preserves length and angle measure",
         answer: "b"
+    },
+    {
+        prompt: "",
+        answer: "k"
     }
 ];
 var score3 = 0;
